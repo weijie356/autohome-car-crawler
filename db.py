@@ -8,7 +8,6 @@ def save_to_db(cars):
 
      # 建表（IF NOT EXISTS = 幂等：重复运行不炸，自动化脚本的及格线）
         # PRIMARY KEY 把"去重约束"写进结构，不靠程序自觉
-
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS series (
         series_id TEXT PRIMARY KEY,
